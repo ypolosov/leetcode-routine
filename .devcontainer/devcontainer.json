@@ -1,5 +1,5 @@
 {
-	"name": "Livecoding devcontainer",
+	"name": "Leetcode routine devcontainer",
 	"build": {
 		"context": "..",
 		"dockerfile": "./Dockerfile.devcontainer",
