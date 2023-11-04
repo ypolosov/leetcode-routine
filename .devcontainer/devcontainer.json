@@ -1,0 +1,43 @@
+{
+	"name": "Livecoding devcontainer",
+	"build": {
+		"context": "..",
+		"dockerfile": "./Dockerfile.devcontainer",
+		"args": {
+			"VERSION": "0-18"
+		}
+	},
+	"runArgs": [
+	],
+	"mounts": [
+		{
+			"source": "projectname-bashhistory",
+			"target": "/commandhistory",
+			"type": "volume"
+		}
+	],
+	"remoteEnv": {
+	},
+	"features": {
+
+	},
+	"overrideFeatureInstallOrder": [
+	],
+	"initializeCommand": ".devcontainer/scripts/initialize.sh || true",
+	"onCreateCommand": ".devcontainer/scripts/on-create.sh || true",
+	"updateContentCommand": ".devcontainer/scripts/update-content.sh || true",
+	"postCreateCommand": ".devcontainer/scripts/post-create.sh || true",
+	"postStartCommand": ".devcontainer/scripts/post-start.sh || true",
+	"postAttachCommand": ".devcontainer/scripts/post-attach.sh || true",
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+
+			},
+			"extensions": [
+			]
+		}
+	},
+	"remoteUser": "node"
+}
