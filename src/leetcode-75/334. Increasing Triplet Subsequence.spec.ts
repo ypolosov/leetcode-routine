@@ -38,7 +38,7 @@ describe("334. Increasing Triplet Subsequence", () => {
     });
 
     it("increasingTriplet 5", () => {
-        const input = { nums: [1,5,0,4,1,3] };
+        const input = { nums: [20,100,10,12,5,13] };
         const output = true;
 
         const result = increasingTriplet(input.nums);

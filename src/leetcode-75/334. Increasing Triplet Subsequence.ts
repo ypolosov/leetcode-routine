@@ -1,15 +1,16 @@
 export function increasingTriplet(nums: number[]): boolean {
-    let minFirst = Number.MAX_VALUE;
-    let minSecond = Number.MAX_VALUE;
-    for (let i = 0; i < nums.length; i++) {
-        if (minSecond < nums[i]) {
+    let firstMin = Number.MAX_VALUE;
+    let secondMin = Number.MAX_VALUE;
+    if(nums.length < 3){
+        return false;
+    }
+    for (let n = 0; n < nums.length; n++) {
+        if ( nums[n] <= firstMin) {
+            firstMin = nums[n];
+        }else if(nums[n] <= secondMin ){
+            secondMin = nums[n]
+        }else {
             return true;
-        }
-        if (minFirst < nums[i] && nums[i] < minSecond) {
-            minSecond = nums[i];
-        }
-        if (nums[i] < minFirst) {
-            minFirst = nums[i];
         }
     }
     return false;
