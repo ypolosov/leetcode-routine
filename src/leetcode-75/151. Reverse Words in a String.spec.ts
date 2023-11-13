@@ -18,7 +18,7 @@ describe("151. Reverse Words in a String", () => {
 
         expect(result).toEqual(output);
     });
-
+ 
     it("reverseWords 3", () => {
         const input = { s: "a good   example" };
         const output = "example good a";
